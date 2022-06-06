@@ -1,0 +1,4 @@
+com\tcs\initiateTest\InitClass.class
+com\tcs\utilities\PropertyFileUtil.class
+com\tcs\PageObjects\LoginPage.class
+com\tcs\testCases\LoginTest.class

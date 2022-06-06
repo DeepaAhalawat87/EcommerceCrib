@@ -1,0 +1,29 @@
+<Configuration>
+    <Appenders>
+        <Console name="Console-Appender" target="SYSTEM_OUT">
+            <PatternLayout>
+                <Pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} %X{correlationId} [%t] %c{1} - %msg%n</Pattern>
+            </PatternLayout>
+        </Console>
+        <RollingFile name="FILE" fileName="target/logs/service.log"
+                     filePattern="service-%d{yyyy-MM-dd}.%i.log">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} -
+                    %msg%n
+                </Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="5 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+
+    </Appenders>
+    <Loggers>
+        <Logger name="org.springframework.web" level="INFO"/>
+        <Root level="INFO">
+            <AppenderRef ref="Console-Appender"/>
+            <AppenderRef ref="FILE"/>
+        </Root>
+    </Loggers>
+</Configuration>
