@@ -21,7 +21,7 @@ public class InventoryItemPageTest extends InitClass {
 		//1. Login ito autocrib application
 		    loginPage.enterName("dmaster-qa");
 			//Thread.sleep(3000);
-		    System.out.println("Correct pwd");
+		    System.out.println("Correct input  pwd");
 			loginPage.enterPassword("1111");
 			loginPage.clickSearchButton();
 			
