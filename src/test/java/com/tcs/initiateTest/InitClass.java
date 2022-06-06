@@ -51,7 +51,7 @@ public class InitClass {
 	{
 		MyListener.putReport();
 		System.out.println("report published");
-		//driver.close();
+		driver.close();
 	}
 	
 	
